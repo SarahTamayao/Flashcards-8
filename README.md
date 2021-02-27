@@ -3,7 +3,7 @@
 ## Lab 1
 
 ### App Description
-`Simple flashcard app
+Simple flashcard app
 
 ### App Walk-though
 
