@@ -97,6 +97,11 @@
                                 <action selector="didTapOnCancel:" destination="ceU-0r-ysj" id="5WT-G4-drw"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="YqB-Nh-vqm">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="ceU-0r-ysj" id="kdA-bY-WaK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQM-JT-xIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
