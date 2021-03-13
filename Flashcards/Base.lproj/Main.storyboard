@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="79.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Creation View Controller-->
         <scene sceneID="DKG-Vh-jy3">
             <objects>
-                <viewController id="ceU-0r-ysj" sceneMemberID="viewController">
+                <viewController id="ceU-0r-ysj" customClass="CreationViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dHm-mo-qdV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +92,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="prN-DZ-j5l">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="XWj-bf-Mh2"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="XWj-bf-Mh2">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="ceU-0r-ysj" id="5WT-G4-drw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQM-JT-xIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
