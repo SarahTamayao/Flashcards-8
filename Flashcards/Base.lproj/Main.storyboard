@@ -79,6 +79,9 @@
                                 <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="q:" destination="RU2-oj-i1H" eventType="editingDidEnd" id="JbZ-EQ-cwT"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Answer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6F1-cA-3Kl">
                                 <rect key="frame" x="49" y="382" width="316" height="34"/>
@@ -97,9 +100,20 @@
                                 <action selector="didTapOnCancel:" destination="HpR-PJ-lPe" id="KQo-Q7-jTe"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="hoc-FK-Kqu">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="HpR-PJ-lPe" id="Zre-aj-vVJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="6F1-cA-3Kl" id="uMf-cu-sSO"/>
+                        <outlet property="didTapOnDone" destination="mjU-dO-Xmy" id="7HK-ST-ibh"/>
+                        <outlet property="questionTextField" destination="B9z-n3-QDB" id="zZk-Cb-TZz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQ1-zt-3Qr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="RU2-oj-i1H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1456.521739130435" y="79.6875"/>
         </scene>
