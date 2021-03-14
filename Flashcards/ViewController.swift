@@ -11,8 +11,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var backLabel: UILabel!
-    
     @IBOutlet weak var card: UIView!
+    
+    @IBOutlet weak var btnOptionOne: UIButton!
+    @IBOutlet weak var btnOptionTwo: UIButton!
+    @IBOutlet weak var btnOptionThree: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,33 @@ class ViewController: UIViewController {
         
         // Create shadow's opacity
         card.layer.shadowOpacity = 0.2
+        
+        // Round button option one's corners
+        btnOptionOne.layer.cornerRadius = 20.0
+        
+        // Customize button option one's border width
+        btnOptionOne.layer.borderWidth = 3.0
+        
+        // Customize button option one's border color
+        btnOptionOne.layer.borderColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        
+        // Round button option two's corners
+        btnOptionTwo.layer.cornerRadius = 20.0
+        
+        // Customize button option two's border width
+        btnOptionTwo.layer.borderWidth = 3.0
+        
+        // Customize button option two's border color
+        btnOptionTwo.layer.borderColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        
+        // Round button option three's corners
+        btnOptionThree.layer.cornerRadius = 20.0
+        
+        // Customize button option three's border width
+        btnOptionThree.layer.borderWidth = 3.0
+        
+        // Customize button option three's border color
+        btnOptionThree.layer.borderColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {

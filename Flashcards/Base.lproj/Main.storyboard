@@ -17,37 +17,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-Vg-Y9v">
-                                <rect key="frame" x="192" y="800" width="30" height="60"/>
+                                <rect key="frame" x="192" y="798" width="31" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <segue destination="bqD-mh-xEM" kind="presentation" id="QKd-6K-IWu"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FYP-yI-kBS">
-                                <rect key="frame" x="35" y="297" width="345" height="219"/>
+                                <rect key="frame" x="35" y="147" width="345" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="December 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkM-fg-1lK">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="219"/>
+                                        <rect key="frame" x="-11" y="0.0" width="368" height="219"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When is Wintana's birthday?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1h-fp-PG8">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="219"/>
+                                        <rect key="frame" x="-11" y="0.0" width="368" height="219"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpX-Dg-GuT">
+                                <rect key="frame" x="35" y="493" width="345" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="December 5">
+                                    <color key="titleColor" systemColor="systemTealColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Db1-Ys-rhn">
+                                <rect key="frame" x="35" y="564" width="345" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="December 10">
+                                    <color key="titleColor" systemColor="systemTealColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iha-b9-Pq6">
+                                <rect key="frame" x="35" y="635" width="345" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="December 15">
+                                    <color key="titleColor" systemColor="systemTealColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -60,6 +87,9 @@
                         <outlet property="BackLabel" destination="dkM-fg-1lK" id="u0q-se-FQE"/>
                         <outlet property="FrontLabel" destination="o1h-fp-PG8" id="GzP-c0-ZsI"/>
                         <outlet property="backLabel" destination="dkM-fg-1lK" id="xDc-aV-COf"/>
+                        <outlet property="btnOptionOne" destination="cpX-Dg-GuT" id="ybR-Sp-qwQ"/>
+                        <outlet property="btnOptionThree" destination="iha-b9-Pq6" id="SDs-C0-nQD"/>
+                        <outlet property="btnOptionTwo" destination="Db1-Ys-rhn" id="pw4-Kn-Jv0"/>
                         <outlet property="card" destination="FYP-yI-kBS" id="Sec-aV-d0Z"/>
                         <outlet property="frontLabel" destination="o1h-fp-PG8" id="ZdD-Jf-th9"/>
                     </connections>
