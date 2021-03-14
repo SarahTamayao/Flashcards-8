@@ -77,6 +77,19 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func didTapOptionOne(_ sender: Any) {
+        btnOptionOne.isHidden = true
+    }
+    
+    @IBAction func didTapOptionTwo(_ sender: Any) {
+        frontLabel.isHidden = true
+    }
+    
+    @IBAction func didTapOptionThree(_ sender: Any) {
+        btnOptionThree.isHidden = true
+    }
+    
+    
     func updateFlashcard(question: String, answer: String) {
         frontLabel.text = question
         backLabel.text = answer
