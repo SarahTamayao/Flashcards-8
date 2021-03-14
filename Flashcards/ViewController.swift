@@ -12,9 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var backLabel: UILabel!
     
+    @IBOutlet weak var card: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Round card's corners
+        card.layer.cornerRadius = 20.0
+        // Clip the labels to the card
+        card.clipsToBounds = true
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
@@ -40,6 +46,5 @@ class ViewController: UIViewController {
         // We set the flashcardsController property to self
         creationController.flashcardsController = self
     }
-    
 }
 
