@@ -104,6 +104,12 @@ class ViewController: UIViewController {
         
         // We set the flashcardsController property to self
         creationController.flashcardsController = self
+        
+        // Add the question the user inputs onto the flashcard
+        creationController.initialQuestion = frontLabel.text
+        
+        // Add the answer the user inputs onto the flashcard
+        creationController.initialAnswer = backLabel.text
     }
 }
 

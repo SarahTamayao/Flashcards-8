@@ -13,14 +13,20 @@ class CreationViewController: UIViewController {
     
     @IBOutlet weak var answerTextField: UITextField!
     
+    var initialQuestion: String?
+    var initialAnswer: String?
+        
     var flashcardsController: ViewController!
-
+     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Set the current flashcard's question to the initial question that pops up when a user wants to add flashcards
+        questionTextField.text = initialQuestion
+        
+        // Set the current flashcard's answer to the initial answer that pops up when a user wants to add flashcards
+        answerTextField.text = initialAnswer
     }
-    
+
     @IBAction func didTapOnCancel(_ sender: Any) {
         dismiss(animated: true)
     }
