@@ -50,7 +50,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="✏️"/>
                                         <connections>
-                                            <segue destination="bqD-mh-xEM" kind="presentation" id="KNz-dS-Onb"/>
+                                            <segue destination="bqD-mh-xEM" kind="show" identifier="EditSegue" id="KNz-dS-Onb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -176,6 +176,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bqD-mh-xEM" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="plP-Sn-qMQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HlB-o0-k5F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -191,7 +192,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QKd-6K-IWu"/>
+        <segue reference="KNz-dS-Onb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
