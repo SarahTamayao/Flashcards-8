@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct Flashcard {
+    var question: String
+    var answer: String
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var frontLabel: UILabel!
@@ -16,6 +21,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnOptionOne: UIButton!
     @IBOutlet weak var btnOptionTwo: UIButton!
     @IBOutlet weak var btnOptionThree: UIButton!
+    
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var prevButton: UIButton!
+    
+    // Array to hold our flashcards
+    var flashcards = [Flashcard]()
+    
+    // Current flashcard index
+    var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +81,9 @@ class ViewController: UIViewController {
         
         // Customize button option three's border color
         btnOptionThree.layer.borderColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        
+        // Start the app with a flashcard question and answer
+        updateFlashcard(question: "How old is Wintana?", answer: "20 years old")
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
@@ -89,10 +106,85 @@ class ViewController: UIViewController {
         btnOptionThree.isHidden = true
     }
     
+    @IBAction func didTapOnNext(_ sender: Any) {
+        // Increase current index
+        currentIndex = currentIndex + 1
+        
+        // Logging to the console
+        print("😎 The current index is \(currentIndex)")
+        
+        // Update labels
+        updateLabels()
+        
+        // Update buttons
+        updateNextPrevButtons()
+        
+        // Logging to the console
+        print("😎 Next button worked")
+    }
+    
+    @IBAction func didTapOnPrev(_ sender: Any) {
+        // Decrease current index
+        currentIndex = currentIndex - 1
+        
+        // Logging to the console
+        print("😎 The current index is \(currentIndex)")
+        
+        // Update labels
+        updateLabels()
+        
+        // Update buttons
+        updateNextPrevButtons()
+        
+        // Logging to the console
+        print("😎 Prev button worked")
+    }
     
     func updateFlashcard(question: String, answer: String) {
-        frontLabel.text = question
-        backLabel.text = answer
+        // Create a flashcard
+        let flashcard = Flashcard(question: question, answer: answer)
+        
+        // Adding flashcard in the flashcards array
+        flashcards.append(flashcard)
+        
+        // Logging to the console
+        print("😎 Added new flashcard")
+        print("😎 We now have \(flashcards.count) flashcards")
+        
+        // Update current index
+        currentIndex = flashcards.count - 1
+        print("😎 Our current index is \(currentIndex)")
+        
+        // Update buttons
+        updateNextPrevButtons()
+        
+        // Update labels
+        updateLabels()
+    }
+    
+    func updateNextPrevButtons() {
+        // Disable next button if at the end
+        if currentIndex == flashcards.count - 1 {
+            nextButton.isEnabled = false
+        } else {
+            nextButton.isEnabled = true
+        }
+        
+        // Disable prev button if at the beginning
+        if currentIndex == 0 {
+            prevButton.isEnabled = false
+        } else {
+            prevButton.isEnabled = true
+        }
+    }
+    
+    func updateLabels() {
+        // Get current flashcard
+        let currentFlashcard = flashcards[currentIndex]
+        
+        // Update labels
+        frontLabel.text = currentFlashcard.question
+        backLabel.text = currentFlashcard.answer
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
