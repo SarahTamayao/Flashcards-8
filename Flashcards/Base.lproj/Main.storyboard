@@ -16,11 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-Vg-Y9v">
-                                <rect key="frame" x="192" y="798" width="31" height="72"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCT-Vg-Y9v">
+                                <rect key="frame" x="176" y="802" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" image="addButton"/>
                                 <connections>
                                     <segue destination="bqD-mh-xEM" kind="presentation" id="QKd-6K-IWu"/>
                                 </connections>
@@ -92,18 +91,20 @@
                                     <action selector="didTapOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7PR-Kg-vme"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tm-d7-fyC">
-                                <rect key="frame" x="43" y="819" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tm-d7-fyC">
+                                <rect key="frame" x="27" y="802" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prev"/>
+                                <state key="normal" image="arrowLeft"/>
+                                <state key="disabled" image="arrowLeftDisabled"/>
                                 <connections>
                                     <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqd-H9-0Uc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5M-m6-XOx">
-                                <rect key="frame" x="341" y="819" width="32" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5M-m6-XOx">
+                                <rect key="frame" x="325" y="802" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" image="arrowRight"/>
+                                <state key="disabled" image="arrowRightDisabled"/>
                                 <connections>
                                     <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l5Y-5m-oFg"/>
                                 </connections>
@@ -213,6 +214,11 @@
         <segue reference="QKd-6K-IWu"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="addButton" width="64" height="64"/>
+        <image name="arrowLeft" width="64" height="64"/>
+        <image name="arrowLeftDisabled" width="64" height="64"/>
+        <image name="arrowRight" width="64" height="64"/>
+        <image name="arrowRightDisabled" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
