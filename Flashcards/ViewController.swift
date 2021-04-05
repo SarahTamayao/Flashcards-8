@@ -109,21 +109,29 @@ class ViewController: UIViewController {
         })
     }
     
-    func animateCardOut() {
+    func animateCardOut(direction: String) {
         
         UIView.animate(withDuration: 0.3, animations: {
+            if direction == "left" {
             self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+            } else {
+                self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+            }
+            
         }, completion: { finished in
             
             self.updateLabels()
             
-            self.animateCardIn()
+            if direction == "left" {
+                self.animateCardIn(start: 300.0)
+            } else {
+                self.animateCardIn(start: -300.0)
+            }
         })
-        
     }
     
-    func animateCardIn() {
-        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+    func animateCardIn(start: CGFloat) {
+        card.transform = CGAffineTransform.identity.translatedBy(x: start, y: 0.0)
         
         UIView.animate(withDuration: 0.3) {
             self.card.transform = CGAffineTransform.identity
@@ -155,7 +163,8 @@ class ViewController: UIViewController {
         // Logging to the console
         print("😎 Next button worked")
         
-        animateCardOut()
+        // determines which way to animate card
+        animateCardOut(direction: "left")
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
@@ -173,6 +182,10 @@ class ViewController: UIViewController {
         
         // Logging to the console
         print("😎 Prev button worked")
+        
+        // determines which way to animate card
+        animateCardOut(direction: "right")
+        
     }
     
     func updateFlashcard(question: String, answer: String) {
